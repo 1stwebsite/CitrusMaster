@@ -1,6 +1,6 @@
 // Функция для получения данных из Google Таблицы
 function fetchDataFromGoogleSheet() {
-  const sheetID = '1G-3wbvdkQGlO64QLMe5gMd4M2epPzF4ohohhYBrb-oM'; // Замените на ID вашей Google Таблицы
+  const sheetID = '1G-3wbvdkQGlO64QLMe5gMd4M2epPzF4ohohhYBrb-oM#gid=1012221624'; // Замените на ID вашей Google Таблицы
   const apiKey = 'AIzaSyAoZ92_SYkSos0qZY7XXL6njvUVGkwCgFk'; // Замените на ваш API ключ
   const range = 'Sheet1!A1:G11'; // Диапазон ячеек, который вы хотите получить
 
