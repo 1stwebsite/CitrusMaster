@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Проверка работы Google Sheets API</title>
+  <title>Интерактивная страница с данными из Google Таблицы</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Данные из Google Таблицы</h1>
-  <table id="data-table">
-    <!-- Здесь будут отображаться данные из таблицы -->
-  </table>
-<!-- Кнопки для сортировки -->
-<div>
-  <button onclick="sortByColumn(0)">Сортировать по Плану</button>
-  <button onclick="sortByColumn(1)">Сортировать по Выполнению</button>
-  <button onclick="sortByColumn(2)">Сортировать по Доле</button>
-  <button onclick="sortByColumn(3)">Сортировать по Осталось</button>
-  <button onclick="sortByColumn(4)">Сортировать по % выполнения</button>
-  <button onclick="sortByColumn(5)">Сортировать по Плану день</button>
-</div>
+  <div class="container">
+    <h1>Данные из Google Таблицы</h1>
+    <table id="data-table">
+      <tr>
+        <th>План</th>
+        <th>Выполнение</th>
+        <th>Доля</th>
+        <th>Осталось</th>
+        <th>%выполнения</th>
+        <th>План день</th>
+      </tr>
+    </table>
+  </div>
 
   <script src="script.js"></script>
 </body>
