@@ -29,3 +29,31 @@ function fetchDataFromGoogleSheet() {
 document.addEventListener('DOMContentLoaded', () => {
   fetchDataFromGoogleSheet();
 });
+// Функция для сортировки данных по столбцу
+function sortByColumn(columnIndex) {
+  const table = document.getElementById('data-table');
+  const rows = Array.from(table.querySelectorAll('tr'));
+  const headerRow = rows.shift(); // Удаляем заголовочную строку из массива
+
+  rows.sort((a, b) => {
+    const aValue = a.cells[columnIndex].textContent;
+    const bValue = b.cells[columnIndex].textContent;
+    return aValue.localeCompare(bValue, undefined, { numeric: true });
+  });
+
+  table.innerHTML = ''; // Очищаем таблицу
+
+  table.appendChild(headerRow); // Добавляем заголовочную строку обратно
+  rows.forEach((row) => table.appendChild(row)); // Добавляем отсортированные строки
+}
+
+// Функция для получения данных из Google Таблицы
+function fetchDataFromGoogleSheet() {
+  // ... Ваш предыдущий код для получения данных
+}
+
+// Получение данных и запуск анимации при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+  fetchDataFromGoogleSheet();
+  animateTable();
+});
