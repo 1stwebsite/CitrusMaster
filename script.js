@@ -13,37 +13,20 @@ function fetchDataFromGoogleSheet() {
       const values = data.values;
       const table = document.getElementById('data-table');
 
-      for (const entry of values) {
-        const row = document.createElement('tr');
-        for (const value of entry) {
-          const cell = document.createElement('td');
-          cell.textContent = value;
-          row.appendChild(cell);
+      for (const row of values) {
+        const tr = document.createElement('tr');
+        for (const cellValue of row) {
+          const td = document.createElement('td');
+          td.textContent = cellValue;
+          tr.appendChild(td);
         }
-        table.appendChild(row);
+        table.appendChild(tr);
       }
     })
     .catch((error) => console.log('Error fetching data:', error));
 }
 
-// Анимация появления таблицы
-function animateTable() {
-  const table = document.getElementById('data-table');
-  table.style.opacity = 0;
-
-  let opacity = 0;
-  const animationInterval = setInterval(() => {
-    opacity += 0.05;
-    table.style.opacity = opacity;
-    if (opacity >= 1) {
-      clearInterval(animationInterval);
-    }
-  }, 100);
-}
-
-// Получение данных и запуск анимации при загрузке страницы
+// Получение данных при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
   fetchDataFromGoogleSheet();
-  animateTable();
 });
-
