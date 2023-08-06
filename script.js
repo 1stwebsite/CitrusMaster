@@ -2,7 +2,7 @@
 function fetchDataFromGoogleSheet() {
   const sheetID = '1G-3wbvdkQGlO64QLMe5gMd4M2epPzF4ohohhYBrb-oM'; // Замените на ID вашей Google Таблицы
   const apiKey = 'AIzaSyAoZ92_SYkSos0qZY7XXL6njvUVGkwCgFk'; // Замените на ваш API ключ
-  const range = 'Sheet1!A1:G11'; // Здесь замените на диапазон ячеек на нужном вам листе
+  const range = 'ЦМ выполнение!A1:G11'; // Здесь замените на диапазон ячеек на нужном вам листе
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
 
