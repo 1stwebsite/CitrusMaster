@@ -1,7 +1,7 @@
 // Функция для получения данных из Google Таблицы
 function fetchDataFromGoogleSheet() {
   const sheetID = '1G-3wbvdkQGlO64QLMe5gMd4M2epPzF4ohohhYBrb-oM'; // Замените на ID вашей Google Таблицы
-  const apiKey = 'YOUR_API_KEY'; // Замените на ваш API ключ
+  const apiKey = 'AIzaSyAoZ92_SYkSos0qZY7XXL6njvUVGkwCgFk'; // Замените на ваш API ключ
   const range = 'Sheet1!A1:G14'; // Диапазон ячеек, который вы хотите получить
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
