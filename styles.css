@@ -1,21 +1,24 @@
+/* Общие стили */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Серый фон */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #fff; /* Белый фон контейнера */
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
+  color: #FFA500; /* Оранжевый цвет для заголовков */
 }
 
+/* Таблица */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -28,5 +31,17 @@ th, td {
 }
 
 th {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Серый фон для заголовков таблицы */
 }
+
+/* Пример стиля для кнопки */
+.button {
+  background-color: #0000FF; /* Синий цвет для кнопки */
+  color: #FFFFFF; /* Белый цвет текста на кнопке */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Дополнительные стили для других элементов могут быть добавлены по желанию */
